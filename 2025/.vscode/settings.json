@@ -1,0 +1,56 @@
+{
+    "cmake.sourceDirectory": "${workspaceFolder}",
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "cmake.buildBeforeRun": true,
+    "cmake.buildTask": true,
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "C_Cpp.clang_format_style": "file",
+    "C_Cpp.clang_format_fallbackStyle": "Google",
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools",
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true
+    },
+    "[c]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools",
+        "editor.formatOnSave": true
+    },
+    "files.associations": {
+        "*.h": "cpp",
+        "*.cpp": "cpp"
+    },
+    "testMate.cpp.test.advancedExecutables": [
+        {
+            "pattern": "{build,Build,BUILD,out}/**/day*_test",
+            "cwd": "${workspaceFolder}",
+            "env": {}
+        }
+    ],
+    "testMate.cpp.test.parallelExecutionLimit": 1,
+    "testMate.cpp.test.runtimeLimit": 60000,
+    "testMate.cpp.test.workingDirectory": "${workspaceFolder}",
+    "testMate.cpp.discovery.testListCaching": false,
+    "testMate.cpp.discovery.loadOnStartup": true,
+    "testMate.cpp.discovery.gracePeriodForMissing": 10,
+    "testMate.cpp.discovery.runtimeLimit": 900,
+    "testMate.cpp.discovery.strictPattern": false,
+    "testMate.cpp.log.logpanel": true,
+    "testMate.cpp.debug.breakOnFailure": true,
+    "testMate.cpp.debug.configTemplate": {
+        "type": "cppdbg",
+        "MIMode": "gdb",
+        "program": "${exec}",
+        "args": "${argsArray}",
+        "cwd": "${cwd}",
+        "environment": [],
+        "externalConsole": false,
+        "stopAtEntry": false,
+        "setupCommands": [
+            {
+                "description": "Enable pretty-printing for gdb",
+                "text": "-enable-pretty-printing",
+                "ignoreFailures": true
+            }
+        ]
+    }
+}
